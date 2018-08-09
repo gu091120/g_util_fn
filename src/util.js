@@ -49,5 +49,3 @@ export function routerParam(url) {
     }
     return obj;
 }
-
-routerParam("http://www.baidu.com?name=1&age=2");
