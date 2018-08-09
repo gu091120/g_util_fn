@@ -1,0 +1,31 @@
+{
+    "name": "g_util_fn",
+    "version": "1.0.0",
+    "description": "some util functions ",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "build": "babel src -d dist --ignore __test__ "
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/gu091120/g_util_fn.git"
+    },
+    "keywords": [
+        "util"
+    ],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/gu091120/g_util_fn/issues"
+    },
+    "homepage": "https://github.com/gu091120/g_util_fn#readme",
+    "devDependencies": {
+        "jest": "^23.4.2",
+        "babel-cli": "^6.24.1",
+        "babel-core": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-stage-0": "^6.24.1"
+    }
+}
