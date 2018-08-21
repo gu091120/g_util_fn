@@ -1,3 +1,11 @@
+/**
+ *
+ * @description 判读个对象的值是否相等
+ * @export
+ * @param {any} obj1
+ * @param {any} obj2
+ * @returns {Boolean}
+ */
 export function isEqual(obj1, obj2) {
     if (obj1 === obj2) {
         return true;
@@ -22,30 +30,4 @@ export function isEqual(obj1, obj2) {
         }
     }
     return true;
-}
-
-export function param(obj) {
-    if (Object.prototype.toString.call(obj) !== "[object Object]") {
-        throw new Error("参数必须是有效对象");
-    }
-    const arr = [];
-    for (let key in obj) {
-        arr.push(`${key}=${obj[key]}`);
-    }
-    return arr.join("&");
-}
-
-export function routerParam(url) {
-    if (typeof url !== "string") {
-        throw new Error("url必须字符串");
-    }
-    const obj = {};
-    const param = url.split("?")[1];
-    if (param) {
-        param.split("&").map((v, i) => {
-            let [key, value] = v.split("=");
-            obj[encodeURIComponent(key)] = encodeURIComponent(value);
-        });
-    }
-    return obj;
 }
